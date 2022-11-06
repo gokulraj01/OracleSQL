@@ -5,26 +5,30 @@
 
 ## How to use?
 User is expected to have Docker installed. (Tested on Ubuntu 22.04)
- - Before first use, build the image.
-     ```bash
-     bash build.sh
-     ```
-     *NOTE: This can take a long time to complete.*
+- Download Oracle Database package
+    ```bash
+    wget https://edelivery.oracle.com/otn-pub/otn_software/db-express/oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm -P files/
+    ```
+- Before first use, build the image.
+    ```bash
+    bash build.sh
+    ```
+    *NOTE: This can take a long time to complete.*
 
- - After build, and for subsequent runs:
-     ```bash
-     bash run.sh
-     ```
- - ### Manual run
-     ```bash
-     # After build and run, in a new terminal
-     # Enter into Oracle Linux container
-     sudo docker exec -it OracleSQL /bin/bash
-     
-     # Run SQL*Plus
-     # Login using default username and password
-     sqlplus
-     ```
+- After build, and for subsequent runs:
+    ```bash
+    bash run.sh
+    ```
+- ### Manual run
+    ```bash
+    # After build and run, in a new terminal
+    # Enter into Oracle Linux container
+    sudo docker exec -it OracleSQL /bin/bash
+    
+    # Run SQL*Plus
+    # Login using default username and password
+    sqlplus
+    ```
 
 ## Misc.
 Ref: https://stackoverflow.com/questions/62574379/su-permission-denied-despite-being-root-in-oracle-container
