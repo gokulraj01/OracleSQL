@@ -37,5 +37,4 @@ RUN echo "source $ORACLE_HOME/bin/oraenv" >> ~/.bashrc &&\
     rm -r install
 
 COPY "files/startup.sh" "startup.sh"
-#ENTRYPOINT ["bash", "startup.sh"]
-ENTRYPOINT /bin/bash
+ENTRYPOINT ["bash", "startup.sh"]
